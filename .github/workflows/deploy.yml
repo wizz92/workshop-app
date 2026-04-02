@@ -51,6 +51,8 @@ jobs:
             echo "🔄 Получение изменений из репозитория..."
             git fetch origin
             git checkout deploy || git checkout -b deploy
+            echo "📦 Сохранение локальных изменений (stash) перед pull..."
+            git stash push -m "deploy: before pull" || true
             git pull origin deploy
 
             echo "📌 Node.js версия: $(node -v)"
