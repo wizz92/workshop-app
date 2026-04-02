@@ -60,17 +60,6 @@ jobs:
 
             echo "🔨 Сборка фронтенда..."
             npm run build
-
-            echo "🚀 Перезапуск сервера через PM2..."
-            if pm2 describe workshop-app > /dev/null 2>&1; then
-              pm2 restart workshop-app
-            else
-              pm2 start server/index.js --name workshop-app
-            fi
-
-            echo "✅ Деплой завершен успешно!"
-            echo "📋 Статус сервера:"
-            pm2 status workshop-app
           ENDSSH
 
       - name: ✅ Deployment status
