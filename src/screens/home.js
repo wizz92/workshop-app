@@ -18,7 +18,7 @@ export function renderHome() {
   const heroHtml = hero
     ? `
       <section class="hero-section screen-enter" aria-labelledby="hero-title">
-        <p class="hero-section__eyebrow">Найближча подія</p>
+        <p class="hero-section__eyebrow">Найближча подія 1111213123</p>
         ${renderEventCard(hero, { variant: 'hero' })}
       </section>
     `
